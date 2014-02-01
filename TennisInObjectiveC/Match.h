@@ -1,9 +1,9 @@
+//  Tennis Object Oriented in Objective-C
+//  PROJECT 1 - PHASE 2
+//  CS470 - Spring 2014
 //
-//  Match.h
-//  TennisInObjectiveC
-//
-//  Created by David Wells on 1/31/14.
-//  Copyright (c) 2014 Ali Kooshesh. All rights reserved.
+//  CREATED BY DAVID WELLS
+//  Copyright (c) 2014 David Wells. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,6 +16,10 @@
 @property (nonatomic) int player1Score;
 @property (nonatomic) int player2Score;
 @property (nonatomic) Player *winner;
+
+//  Instance Method Declarations
+-(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2;
+-(Score *) play: (Player *) player;
 
 
 @end

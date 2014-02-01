@@ -29,6 +29,9 @@
 		3E9337E81890DBD800A0AFC0 /* PointScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9337E71890DBD800A0AFC0 /* PointScore.m */; };
 		525B19AE189C680D00F216AA /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B19AD189C680D00F216AA /* Match.m */; };
 		525B19B1189C6A5F00F216AA /* MatchScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B19B0189C6A5F00F216AA /* MatchScore.m */; };
+		525B19B4189D768500F216AA /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B19B3189D768500F216AA /* Set.m */; };
+		525B19B7189D76FC00F216AA /* TieBreaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B19B6189D76FC00F216AA /* TieBreaker.m */; };
+		525B19BA189D770D00F216AA /* TieBreakerScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B19B9189D770D00F216AA /* TieBreakerScore.m */; };
 		52C6A18F1892038B008EBCB4 /* SetScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C6A18E1892038B008EBCB4 /* SetScore.m */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,12 @@
 		525B19AD189C680D00F216AA /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
 		525B19AF189C6A5F00F216AA /* MatchScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchScore.h; sourceTree = "<group>"; };
 		525B19B0189C6A5F00F216AA /* MatchScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchScore.m; sourceTree = "<group>"; };
+		525B19B2189D768500F216AA /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		525B19B3189D768500F216AA /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
+		525B19B5189D76FC00F216AA /* TieBreaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TieBreaker.h; sourceTree = "<group>"; };
+		525B19B6189D76FC00F216AA /* TieBreaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TieBreaker.m; sourceTree = "<group>"; };
+		525B19B8189D770D00F216AA /* TieBreakerScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TieBreakerScore.h; sourceTree = "<group>"; };
+		525B19B9189D770D00F216AA /* TieBreakerScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TieBreakerScore.m; sourceTree = "<group>"; };
 		52C6A18D1892038B008EBCB4 /* SetScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetScore.h; sourceTree = "<group>"; };
 		52C6A18E1892038B008EBCB4 /* SetScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetScore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,24 +192,30 @@
 		3E9337D91890C33A00A0AFC0 /* Tennis Files */ = {
 			isa = PBXGroup;
 			children = (
-				3E9337D61890C31200A0AFC0 /* Player.h */,
-				3E9337D71890C31200A0AFC0 /* Player.m */,
-				3E9337DA1890CDAD00A0AFC0 /* Score.h */,
-				3E9337DB1890CDAD00A0AFC0 /* Score.m */,
-				3E9337DD1890D69200A0AFC0 /* Game.h */,
-				3E9337DE1890D69200A0AFC0 /* Game.m */,
-				3E9337E01890D73600A0AFC0 /* GameScore.h */,
-				3E9337E11890D73600A0AFC0 /* GameScore.m */,
 				3E9337E31890D9D100A0AFC0 /* Competition.h */,
 				3E9337E41890D9D100A0AFC0 /* Competition.m */,
-				3E9337E61890DBD800A0AFC0 /* PointScore.h */,
-				3E9337E71890DBD800A0AFC0 /* PointScore.m */,
-				52C6A18D1892038B008EBCB4 /* SetScore.h */,
-				52C6A18E1892038B008EBCB4 /* SetScore.m */,
+				3E9337DA1890CDAD00A0AFC0 /* Score.h */,
+				3E9337DB1890CDAD00A0AFC0 /* Score.m */,
+				3E9337D61890C31200A0AFC0 /* Player.h */,
+				3E9337D71890C31200A0AFC0 /* Player.m */,
 				525B19AC189C680D00F216AA /* Match.h */,
 				525B19AD189C680D00F216AA /* Match.m */,
 				525B19AF189C6A5F00F216AA /* MatchScore.h */,
 				525B19B0189C6A5F00F216AA /* MatchScore.m */,
+				525B19B2189D768500F216AA /* Set.h */,
+				525B19B3189D768500F216AA /* Set.m */,
+				52C6A18D1892038B008EBCB4 /* SetScore.h */,
+				52C6A18E1892038B008EBCB4 /* SetScore.m */,
+				3E9337DD1890D69200A0AFC0 /* Game.h */,
+				3E9337DE1890D69200A0AFC0 /* Game.m */,
+				3E9337E01890D73600A0AFC0 /* GameScore.h */,
+				3E9337E11890D73600A0AFC0 /* GameScore.m */,
+				3E9337E61890DBD800A0AFC0 /* PointScore.h */,
+				3E9337E71890DBD800A0AFC0 /* PointScore.m */,
+				525B19B5189D76FC00F216AA /* TieBreaker.h */,
+				525B19B6189D76FC00F216AA /* TieBreaker.m */,
+				525B19B8189D770D00F216AA /* TieBreakerScore.h */,
+				525B19B9189D770D00F216AA /* TieBreakerScore.m */,
 			);
 			name = "Tennis Files";
 			sourceTree = "<group>";
@@ -306,12 +321,15 @@
 				525B19AE189C680D00F216AA /* Match.m in Sources */,
 				3E9337B81890C2F000A0AFC0 /* ViewController.m in Sources */,
 				3E9337E81890DBD800A0AFC0 /* PointScore.m in Sources */,
+				525B19BA189D770D00F216AA /* TieBreakerScore.m in Sources */,
 				525B19B1189C6A5F00F216AA /* MatchScore.m in Sources */,
 				3E9337DC1890CDAD00A0AFC0 /* Score.m in Sources */,
 				3E9337E51890D9D100A0AFC0 /* Competition.m in Sources */,
 				3E9337DF1890D69200A0AFC0 /* Game.m in Sources */,
 				3E9337B21890C2F000A0AFC0 /* AppDelegate.m in Sources */,
+				525B19B4189D768500F216AA /* Set.m in Sources */,
 				52C6A18F1892038B008EBCB4 /* SetScore.m in Sources */,
+				525B19B7189D76FC00F216AA /* TieBreaker.m in Sources */,
 				3E9337AE1890C2F000A0AFC0 /* main.m in Sources */,
 				3E9337E21890D73600A0AFC0 /* GameScore.m in Sources */,
 			);

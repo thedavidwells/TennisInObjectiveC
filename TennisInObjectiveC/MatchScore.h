@@ -1,16 +1,16 @@
+//  Tennis Object Oriented in Objective-C
+//  PROJECT 1 - PHASE 2
+//  CS470 - Spring 2014
 //
-//  MatchScore.h
-//  TennisInObjectiveC
-//
-//  Created by David Wells on 1/31/14.
-//  Copyright (c) 2014 Ali Kooshesh. All rights reserved.
+//  CREATED BY DAVID WELLS
+//  Copyright (c) 2014 David Wells. All rights reserved.
 //
 
 #import "Score.h"
 
 @interface MatchScore : Score
 
-@property(nonatomic) NSInteger *setNumber = [
+@property(nonatomic) NSInteger *setNumber;
 
 
 @end

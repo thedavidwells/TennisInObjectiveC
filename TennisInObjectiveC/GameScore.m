@@ -1,4 +1,4 @@
-//  Tennis Object Oriented
+//  Tennis Object Oriented in Objective-C
 //  PROJECT 1 - PHASE 2
 //  CS470 - Spring 2014
 //
@@ -12,7 +12,7 @@
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2
 {
-    if( (self = [super initWithFirstPlayer:p2 secondPlayer:p2   ]) == nil)
+    if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2   ]) == nil)
         return nil;
     return self;
 }
