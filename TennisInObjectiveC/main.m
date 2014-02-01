@@ -12,6 +12,9 @@
 #import "Player.h"
 #import "Game.h"
 #import "GameScore.h"
+#import "Match.h"
+#import "MatchScore.h"
+
 
 
 //  Revisions to main() by David Wells
@@ -33,7 +36,7 @@ int main(int argc, char * argv[])
         Player *player2 = [[Player alloc] initWithProbability: prob2];
         
         // Create a MATCH - A match is the overall entity that encompases sets and games
-        
+        Match *aTennisMatch = [[Match alloc] initWithFirstPlayer:player1 secondPlayer:player2];
         
         // Create a score - and start playing the match!
         // The result of the match goes into score

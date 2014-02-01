@@ -27,6 +27,8 @@
 		3E9337E21890D73600A0AFC0 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9337E11890D73600A0AFC0 /* GameScore.m */; };
 		3E9337E51890D9D100A0AFC0 /* Competition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9337E41890D9D100A0AFC0 /* Competition.m */; };
 		3E9337E81890DBD800A0AFC0 /* PointScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9337E71890DBD800A0AFC0 /* PointScore.m */; };
+		525B19AE189C680D00F216AA /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B19AD189C680D00F216AA /* Match.m */; };
+		525B19B1189C6A5F00F216AA /* MatchScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 525B19B0189C6A5F00F216AA /* MatchScore.m */; };
 		52C6A18F1892038B008EBCB4 /* SetScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C6A18E1892038B008EBCB4 /* SetScore.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,10 @@
 		3E9337E41890D9D100A0AFC0 /* Competition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Competition.m; sourceTree = "<group>"; };
 		3E9337E61890DBD800A0AFC0 /* PointScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointScore.h; sourceTree = "<group>"; };
 		3E9337E71890DBD800A0AFC0 /* PointScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointScore.m; sourceTree = "<group>"; };
+		525B19AC189C680D00F216AA /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
+		525B19AD189C680D00F216AA /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
+		525B19AF189C6A5F00F216AA /* MatchScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchScore.h; sourceTree = "<group>"; };
+		525B19B0189C6A5F00F216AA /* MatchScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchScore.m; sourceTree = "<group>"; };
 		52C6A18D1892038B008EBCB4 /* SetScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetScore.h; sourceTree = "<group>"; };
 		52C6A18E1892038B008EBCB4 /* SetScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetScore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +197,10 @@
 				3E9337E71890DBD800A0AFC0 /* PointScore.m */,
 				52C6A18D1892038B008EBCB4 /* SetScore.h */,
 				52C6A18E1892038B008EBCB4 /* SetScore.m */,
+				525B19AC189C680D00F216AA /* Match.h */,
+				525B19AD189C680D00F216AA /* Match.m */,
+				525B19AF189C6A5F00F216AA /* MatchScore.h */,
+				525B19B0189C6A5F00F216AA /* MatchScore.m */,
 			);
 			name = "Tennis Files";
 			sourceTree = "<group>";
@@ -293,8 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9337D81890C31200A0AFC0 /* Player.m in Sources */,
+				525B19AE189C680D00F216AA /* Match.m in Sources */,
 				3E9337B81890C2F000A0AFC0 /* ViewController.m in Sources */,
 				3E9337E81890DBD800A0AFC0 /* PointScore.m in Sources */,
+				525B19B1189C6A5F00F216AA /* MatchScore.m in Sources */,
 				3E9337DC1890CDAD00A0AFC0 /* Score.m in Sources */,
 				3E9337E51890D9D100A0AFC0 /* Competition.m in Sources */,
 				3E9337DF1890D69200A0AFC0 /* Game.m in Sources */,
