@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Score.h"
 
+/** The simplest extension of Score is PointScore where one of the two
+ * players scores one point.  This rule has been implemented by
+ * method, "haveAWinner".
+ */
+
 @interface PointScore : Score
 
 @end

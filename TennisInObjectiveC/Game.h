@@ -10,6 +10,11 @@
 #import "Player.h"
 #import "Competition.h"
 
+/**  A Game is a Competition in which a player (specified by the
+ *  argument to "play") serves points until there is a winner.  The
+ *  rule of winning a game is given by class, GameScore.
+ */
+
 @interface Game : Competition
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2;

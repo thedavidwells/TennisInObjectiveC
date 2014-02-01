@@ -8,6 +8,9 @@
 
 #import "Score.h"
 
+/**  A match is won by the player who wins the first 3 sets.
+ */
+
 @interface MatchScore : Score
 
 @property(nonatomic) NSInteger *setNumber;

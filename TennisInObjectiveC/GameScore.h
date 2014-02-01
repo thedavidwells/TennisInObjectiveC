@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "Score.h"
 
+/**  The player who scores at least 4 points and is ahead by at least
+ *  2 points wins a game.
+ */
+
 @interface GameScore : Score
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2;

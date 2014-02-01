@@ -6,6 +6,16 @@
 //  Copyright (c) 2014 David Wells. All rights reserved.
 //
 
+/** Class, Score, represents the abstract notion of keeping track of
+ *  numbers related to different types of competition.  These numbers
+ *  are meaningful only within the context of competition for which
+ *  the score is kept.  For example, if the value of method,
+ *  player1Score() was 3 and the score was the representation of the
+ *  result of a game, 3 refers to 3 points being won by Player1().
+ *  On the other hand, if this score represented a set, then 3
+ *  represents the number of sets won by Player1().
+ */
+
 #import <Foundation/Foundation.h>
 #import "Player.h"
 

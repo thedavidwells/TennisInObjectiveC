@@ -8,6 +8,13 @@
 
 #import "Score.h"
 
+/**  The player who scores at least 7 points and is ahead by at least
+ *  2 points wins a tie-breaker.
+ */
+
 @interface TieBreakerScore : Score
+
+-(BOOL) haveAWinner;
+-(void) print;
 
 @end

@@ -8,6 +8,27 @@
 
 #import "TieBreakerScore.h"
 
+
+//  Implemented by David Wells
 @implementation TieBreakerScore
+
+//  Implemented by David Wells
+
+//  Implementation of the two things I added to handle the tie situation, which is different from the normal game situation.
+
+
+-(BOOL) haveAWinner
+{
+    
+    return (self.player1Score >= 7 || self.player2Score >= 7 ) && abs(self.player1Score - self.player2Score >= 2 );
+    
+}
+
+
+-(void) print
+{
+    NSLog(@"(Tie Breaker %d - %d)", self.player1Score, self.player2Score);
+    
+}
 
 @end

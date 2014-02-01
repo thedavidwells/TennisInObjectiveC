@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Player.h"
 
+/** Competition is the abstract notion of a "competitive activity"
+ * between two players.  It is assumed that this type of activity
+ * results in a score that will be reported by an instance of class,
+ * "Score".
+ */
+
 @interface Competition : NSObject
 
 @property (nonatomic) Player *player1;

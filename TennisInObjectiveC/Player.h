@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/** A player is identified by his/her probability of winning a point
+ * when he/she serves that point.
+ */
+
 @class Score;
 
 @interface Player : NSObject
