@@ -47,7 +47,7 @@
     
     addScore: [score getWinner];
     
-    _tieBreakerScore = score;
+    self.tieBreakerScore = score;
     
 }
 
@@ -56,8 +56,8 @@
     
     NSLog(@" %d, %d ", self.player1Score, self.player2Score);
     
-    if (_tieBreakerScore != nil) {
-        [_tieBreakerScore print];
+    if (self.tieBreakerScore != nil) {
+        [self.tieBreakerScore print];
     }
     
 }

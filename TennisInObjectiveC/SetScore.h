@@ -7,6 +7,8 @@
 //
 
 #import "Score.h"
+#import "TieBreakerScore.h"
+#import "TieBreaker.h"
 
 /**  The player who wins at least 6 games and is ahead by at least
  *  2 games wins a set.  A tie-breaker will be played is the players
@@ -17,8 +19,22 @@
 @interface SetScore : Score
 
 
+// Properties:
+@property (nonatomic) TieBreakerScore *tieBreakerScore;
+
+
+// Instance Methods:
 -(instancetype) initWithFirstPlayer:(Player *)p1 secondPlayer:(Player *)p2;
 
-@property (nonatomic) TieBreakerScore *tieBreakerScore;
+-(BOOL) haveAWinner;
+
+-(BOOL) shouldPlayATieBreaker;
+
+-(void) addTieScore: (TieBreakerScore *) score;
+
+-(void) print;
+
+
+
 
 @end

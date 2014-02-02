@@ -27,6 +27,7 @@
 }
 
 
+//  Implemented by David Wells
 -(Score *) play:(Player *)player
 {
     

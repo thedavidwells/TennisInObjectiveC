@@ -7,6 +7,13 @@
 //
 
 #import "Competition.h"
+#import "TieBreaker.h"
+#import "PointScore.h"
+#import "TieBreakerScore.h"
+#import "GameScore.h"
+#import "PointScore.h"
+#import "Player.h"
+#import "Score.h"
 
 /**  A Set is a Competition in which players play several games until
  *  there is a winner.  The rule of winning a set is given by class,
