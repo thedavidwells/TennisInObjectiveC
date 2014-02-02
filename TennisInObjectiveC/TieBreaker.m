@@ -7,6 +7,13 @@
 //
 
 #import "TieBreaker.h"
+#import "PointScore.h"
+#import "TieBreakerScore.h"
+#import "GameScore.h"
+#import "PointScore.h"
+#import "Player.h"
+#import "Score.h"
+
 
 
 //  Implemented by David Wells
@@ -19,25 +26,42 @@
     return self;
 }
 
+
 -(Score *) play:(Player *)player
 {
     
     //  Create a score object for this TieBreaker round
     //  A tiebreaker has different rules, so we made a different class to handle that
-    Score *tieScore = [[TieBreakerScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
+    TieBreakerScore *tieScore = [[TieBreakerScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
+    // Switch servers
+    player = [Player otherPlayer: player];
+    
+    // Create a variable to keep track of when we switch servers (initialized to not switch)
+    bool switchTheServer = false;
+    
+    //  While we don't have a winner of the tie-breaker round...
     while( ! [tieScore haveAWinner] ) {
         
+        // Continue serving points and getting the winner
+        PointScore *pointScore = (PointScore *) [player serveAPoint];
+        [tieScore addScore: [pointScore getWinner] ];
         
-        PointScore *pScore =  (PointScore *) [player serveAPoint];
-        [gameScore addScore: [pScore getWinner]];
-        pScore = nil;
+        //  Here we determine if we need to switch servers
+        //  Because we switch the server in a tie-breaker round every 2 turns
+        if (switchTheServer) {
+            // Switch servers
+            player = [Player otherPlayer: player];
+        }
         
+        // Set the server variable to the opposite of whatever it is currently set to
+        // The point is to switch servers every other time
+        switchTheServer = !switchTheServer;
         
     }
     
     
-    return gameScore;
+    return tieScore;
 }
 
 @end

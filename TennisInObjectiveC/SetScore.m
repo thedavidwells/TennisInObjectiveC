@@ -10,6 +10,17 @@
 #import "TieBreaker.h"
 #import "TieBreakerScore.h"
 
+
+// Private interface
+@interface SetScore()
+
+//@property (nonatomic) TieBreakerScore *tieBreakerScore;
+
+
+@end
+
+
+
 @implementation SetScore
 
 
@@ -33,7 +44,21 @@
 -(void) addTieScore: (TieBreakerScore *) score
 {
     
-    //  NEED TO FINISH IMPLEMENTING...
+    
+    addScore: [score getWinner];
+    
+    _tieBreakerScore = score;
+    
+}
+
+-(void) print
+{
+    
+    NSLog(@" %d, %d ", self.player1Score, self.player2Score);
+    
+    if (_tieBreakerScore != nil) {
+        [_tieBreakerScore print];
+    }
     
 }
 

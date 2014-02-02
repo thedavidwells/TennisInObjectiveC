@@ -14,7 +14,6 @@
 
 @interface TieBreakerScore : Score
 
--(BOOL) haveAWinner;
--(void) print;
+-(instancetype) initWithFirstPlayer:(Player *)p1 secondPlayer:(Player *)p2;
 
 @end

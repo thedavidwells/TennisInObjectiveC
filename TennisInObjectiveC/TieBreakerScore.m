@@ -16,6 +16,15 @@
 
 //  Implementation of the two things I added to handle the tie situation, which is different from the normal game situation.
 
+-(instancetype) initWithFirstPlayer:(Player *)p1 secondPlayer:(Player *)p2
+{
+    if ( ( self = [super initWithFirstPlayer:p1 secondPlayer:p2 ] ) == nil) {
+        return nil;
+    }
+    
+    return self;
+}
+
 
 -(BOOL) haveAWinner
 {
