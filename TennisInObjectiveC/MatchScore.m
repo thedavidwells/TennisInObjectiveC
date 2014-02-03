@@ -31,28 +31,20 @@
 {
     // Create an array to hold all of the scores
     // scores[setNumber] = reinterpret_cast<SetScore *>(score);
-    [self.scores[_setNumber] addObject: (SetScore *)score];
+    [self.scores[_setNumber] addObject: score];
     
-    // Increment the set number
-    self.setNumber++;
+
     
     
     // Check the winner.  Whoever wins gets their point score incremented
-    // score -> getWinner() == player1() ? p1Score++ : p2Score++;
-    //[_scores addObject: (SetScore *) score ];
-   // score.getWinner ==  self.player1 ? self.player1Score++ : self.player2Score++;
-    if (score.getWinner == self.player1) {
-        self.player1Score++;
-    }
-    else{
-        self.player2Score++;
-    }
-    
+   score.getWinner ==  self.player1 ? self.player1Score++ : self.player2Score++;
+
+    // Increment the set number
+    self.setNumber++;
 }
 
--(void) print
+-(NSString *) description
 {
-    
     
     // Using same format as tennis.cpp for printing:
     //cout << "   Set No.    Player A          Player B\n";
@@ -60,16 +52,25 @@
     
     for( int i = 0; i < _setNumber; i++ ) {
         
+        NSLog(@"%d       %@", i+1, self.scores[i]);
+        
+        // Old code:
         // Just setting widths and specifying format for printing
         //cout << setw(7) << i+1;
-        NSLog(@"%d", i+1);
-        [_scores[i] print];
+        //[_scores[i] print];
         //cout << endl;
-    
+        
     }
     
     // Print out final winner of the match:
     
+    return self.player1Score > self.player2Score ?
+    [NSString stringWithFormat:@"\nPlayer A wins the match %d sets to %d \n", self.player1Score, self.player2Score] :
+    [NSString stringWithFormat:@"\nPlayer B wins the match %d sets to %d \n", self.player2Score, self.player1Score];
+    
+    
+    
+    /*  old code
     //  If player 1 is the winner
     if ( self.player1Score > self.player2Score ) {
         
@@ -90,7 +91,7 @@
         NSLog(@"\nPlayer B wins the match %d sets to %d \n", self.player2Score, self.player1Score);
         
     }
-    
+    */
     
 }
 

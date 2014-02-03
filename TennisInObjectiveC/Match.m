@@ -40,13 +40,13 @@
         
         //  Start playing a set  (which consists of many games)
         //  Set the set score as the result
-        Score *setScore = [set play: player];
+        SetScore *setScore = (SetScore *)[set play: player];
         
         //  Add the score to our Matchscore object
-        [matchScore addScore:[setScore getWinner]];
+        [matchScore addScore: setScore ];
         
         //  The set is over so remove it before starting another
-        [set delete:set];
+        //[set delete:set];
         
         //  Switch servers by setting p as the other player
         player = [Player otherPlayer: player];

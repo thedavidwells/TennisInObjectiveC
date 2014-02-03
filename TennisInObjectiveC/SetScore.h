@@ -32,7 +32,7 @@
 
 -(void) addTieScore: (TieBreakerScore *) score;
 
--(void) print;
+-(NSString *) description;
 
 
 

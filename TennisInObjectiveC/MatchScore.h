@@ -22,7 +22,7 @@
 
 -(void) addScore:( Score *) score;
 
--(void) print;
+-(NSString *) description;
 
 
 @end

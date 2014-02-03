@@ -41,11 +41,11 @@ int main(int argc, char * argv[])
         
         // Create a score - and start playing the match!
         // The result of the match goes into the score object
-        Score *theTennisMatchScoreObject = [aTennisMatch play:player1];
+        Score *tennisMatchScoreObject = [aTennisMatch play:player1];
         
         
         // Print the final score for this tennis match
-        NSLog(@"%@", theTennisMatchScoreObject);
+        NSLog(@"%@", tennisMatchScoreObject);
         
         
         

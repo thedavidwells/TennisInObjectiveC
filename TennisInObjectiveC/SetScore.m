@@ -51,14 +51,15 @@
     
 }
 
--(void) print
+-(NSString *) description
 {
     
-    NSLog(@" %d, %d ", self.player1Score, self.player2Score);
-    
+    return [NSString stringWithFormat:@" %d, %d ", self.player1Score, self.player2Score];
+    /*
     if (self.tieBreakerScore != nil) {
         [self.tieBreakerScore print];
     }
+     */
     
 }
 

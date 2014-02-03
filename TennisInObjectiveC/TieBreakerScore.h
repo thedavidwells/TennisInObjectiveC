@@ -16,7 +16,7 @@
 
 -(instancetype) initWithFirstPlayer:(Player *)p1 secondPlayer:(Player *)p2;
 -(BOOL) haveAWinner;
--(void) print;
+-(NSString *) description;
 
 
 @end

@@ -34,9 +34,9 @@
 }
 
 
--(void) print
+-(NSString *) description
 {
-    NSLog(@"(Tie Breaker %d - %d)", self.player1Score, self.player2Score);
+    return [NSString stringWithFormat:@"\n\n(Tie Breaker %d - %d\n\n", self.player1Score, self.player2Score];
     
 }
 
