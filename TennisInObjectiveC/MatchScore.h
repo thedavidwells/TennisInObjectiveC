@@ -14,7 +14,10 @@
 @interface MatchScore : Score
 
 @property(nonatomic) int setNumber;
+
+// A property for an array to hold scores
 @property(nonatomic) NSMutableArray *scores;
+
 
 -(instancetype) initWithFirstPlayer:(Player *)p1 secondPlayer:(Player *)p2;
 

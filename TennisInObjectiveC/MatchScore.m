@@ -31,10 +31,10 @@
 {
     // Create an array to hold all of the scores
     // scores[setNumber] = reinterpret_cast<SetScore *>(score);
-    [self.scores[_setNumber] addObject: score];
+   // [self.scores[_setNumber] addObject: score];
     
+    self.scores[_setNumber] = (Score * ) score;
 
-    
     
     // Check the winner.  Whoever wins gets their point score incremented
    score.getWinner ==  self.player1 ? self.player1Score++ : self.player2Score++;
@@ -52,7 +52,7 @@
     
     for( int i = 0; i < _setNumber; i++ ) {
         
-        NSLog(@"%d       %@", i+1, self.scores[i]);
+        NSLog(@"%d       %@", i+1, [self.scores objectAtIndex: i ]);
         
         // Old code:
         // Just setting widths and specifying format for printing

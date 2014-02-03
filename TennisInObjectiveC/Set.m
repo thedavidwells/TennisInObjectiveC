@@ -34,17 +34,17 @@
     // While we don't have a winner of the Set, continue playing games.
     while( ! [setScore haveAWinner] ) {
         
-        // Create a new game and score object
-        Game *game = [[Game alloc ] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
+        // Create a new game to play and initialize it with the players
+        Game *gameObject = [[Game alloc ] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
         
         // Start playing the game
-        Score *gameScore = [game play:player];
+        Score *gameScore = [gameObject play:player];
         
         // Get the winner from the game and add the points from the game
         [setScore addScore: [gameScore  getWinner] ];
         
-        // Delete the game, and free up memory because the game is over
-        //[game delete:game];
+        // Reset the score before playing the next game
+        gameScore = nil;
         
         // After the game switch servers
         player = [Player otherPlayer: player];
