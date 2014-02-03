@@ -13,7 +13,7 @@
 
 @interface MatchScore : Score
 
-@property(nonatomic) NSInteger *setNumber;
+@property(nonatomic) int setNumber;
 @property(nonatomic) NSMutableArray *scores;
 
 -(BOOL) haveAWinner;
