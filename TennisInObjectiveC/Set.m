@@ -57,7 +57,7 @@
             
             // We'll add the tiebreaker score to score, but we'll need to cast the result of playing a tiebreaker to the same type.
             //setScore -> addTieScore( reinterpret_cast<TieBreakerScore *>(tieBreaker -> play(p)));
-            [SetScore addTieScore: (TieBreakerScore *)[tieBreaker play:player];
+            [setScore addTieScore: (TieBreakerScore *)[tieBreaker play:player]];
             
             // Now that we've settled the tie, we can return out of the set
             return setScore;
@@ -68,7 +68,7 @@
     }
     
     
-    return gameScore;
+    return setScore;
     
 }
 
