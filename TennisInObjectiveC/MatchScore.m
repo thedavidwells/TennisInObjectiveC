@@ -25,7 +25,7 @@
 {
     // Create an array to hold all of the scores
     // scores[setNumber] = reinterpret_cast<SetScore *>(score);
-    [self.scores addObject: (SetScore *)score];
+    [self.scores[_setNumber] addObject: (SetScore *)score];
     
     // Increment the set number
     _setNumber++;
@@ -33,7 +33,7 @@
     
     // Check the winner.  Whoever wins gets their point score incremented
     // score -> getWinner() == player1() ? p1Score++ : p2Score++;
-    [_scores addObject: (SetScore *) score ];
+    //[_scores addObject: (SetScore *) score ];
     score.getWinner ==  self.player1 ? self.player1Score++ : self.player2Score++;
     
 }
