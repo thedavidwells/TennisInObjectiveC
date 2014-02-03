@@ -14,6 +14,12 @@
 //  Implemented by David Wells
 @implementation MatchScore
 
+-(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2
+{
+    if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2   ]) == nil)
+        return nil;
+    return self;
+}
 
 -(BOOL) haveAWinner
 {
@@ -28,13 +34,19 @@
     [self.scores[_setNumber] addObject: (SetScore *)score];
     
     // Increment the set number
-    _setNumber++;
+    self.setNumber++;
     
     
     // Check the winner.  Whoever wins gets their point score incremented
     // score -> getWinner() == player1() ? p1Score++ : p2Score++;
     //[_scores addObject: (SetScore *) score ];
-    score.getWinner ==  self.player1 ? self.player1Score++ : self.player2Score++;
+   // score.getWinner ==  self.player1 ? self.player1Score++ : self.player2Score++;
+    if (score.getWinner == self.player1) {
+        self.player1Score++;
+    }
+    else{
+        self.player2Score++;
+    }
     
 }
 
@@ -46,7 +58,6 @@
     //cout << "   Set No.    Player A          Player B\n";
     NSLog(@"   Set No.    Player A          Player B\n");
     
-    
     for( int i = 0; i < _setNumber; i++ ) {
         
         // Just setting widths and specifying format for printing
@@ -54,25 +65,28 @@
         NSLog(@"%d", i+1);
         [_scores[i] print];
         //cout << endl;
-        
-        
+    
     }
     
     // Print out final winner of the match:
     
     //  If player 1 is the winner
     if ( self.player1Score > self.player2Score ) {
+        
         //cout << "\nPlayer A wins the match " << player1Score() << " sets to "
        //<< player2Score() << endl;
+        
         NSLog(@"\nPlayer A wins the match %d sets to %d \n", self.player1Score, self.player2Score);
         
     }
     
     // Or if player 2 is the winner
     else{
+        
         // cout << "\nPlayer B wins the match " << player2Score() << " sets to "
         // << player1Score() << endl;
         //cout << endl;
+        
         NSLog(@"\nPlayer B wins the match %d sets to %d \n", self.player2Score, self.player1Score);
         
     }

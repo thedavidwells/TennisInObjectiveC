@@ -18,11 +18,13 @@
 
 @interface Match : Competition
 
-@property (nonatomic) Player *player1;
-@property (nonatomic) Player *player2;
-@property (nonatomic) int player1Score;
+//@property (nonatomic) Player *player1;
+//@property (nonatomic) Player *player2;
+/*
+ @property (nonatomic) int player1Score;
 @property (nonatomic) int player2Score;
 @property (nonatomic) Player *winner;
+*/
 
 //  Instance Method Declarations
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2;

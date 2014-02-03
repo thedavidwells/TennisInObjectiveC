@@ -31,7 +31,6 @@
 -(BOOL) areTied;
 -(void) addScore: (Player *) p;
 -(Player *)getWinner;
-
 -(BOOL) haveAWinner;
 
 @end

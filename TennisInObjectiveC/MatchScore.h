@@ -16,6 +16,8 @@
 @property(nonatomic) int setNumber;
 @property(nonatomic) NSMutableArray *scores;
 
+-(instancetype) initWithFirstPlayer:(Player *)p1 secondPlayer:(Player *)p2;
+
 -(BOOL) haveAWinner;
 
 -(void) addScore:( Score *) score;
