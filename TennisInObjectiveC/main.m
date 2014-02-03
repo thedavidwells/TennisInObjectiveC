@@ -14,6 +14,7 @@
 #import "GameScore.h"
 #import "Match.h"
 #import "MatchScore.h"
+#import "Score.h"
 
 
 
@@ -39,16 +40,13 @@ int main(int argc, char * argv[])
         Match *aTennisMatch = [[Match alloc] initWithFirstPlayer:player1 secondPlayer:player2];
         
         // Create a score - and start playing the match!
-        // The result of the match goes into score
-        
+        // The result of the match goes into the score object
+        Score *theTennisMatchScoreObject = [aTennisMatch play:player1];
         
         
         // Print the final score for this tennis match
+        NSLog(@"%@", theTennisMatchScoreObject);
         
-        
-        Game *game = [[Game alloc] initWithFirstPlayer:player1 secondPlayer:player2];
-        Score *gScore = [game play: player1];  // let player1 serve for this game.
-        NSLog(@"%@", gScore);
         
         
         // All went well, so return!

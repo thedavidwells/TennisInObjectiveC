@@ -44,7 +44,7 @@
         [setScore addScore: [gameScore  getWinner] ];
         
         // Delete the game, and free up memory because the game is over
-        [game delete:game];
+        //[game delete:game];
         
         // After the game switch servers
         player = [Player otherPlayer: player];
