@@ -8,6 +8,11 @@
 
 #import "Match.h"
 #import "MatchScore.h"
+#import "Set.h"
+#import "SetScore.h"
+#import "Game.h"
+#include "TieBreakerScore.h"
+#include "TieBreaker.h"
 
 @implementation Match
 
@@ -31,13 +36,20 @@
     while( ! [matchScore haveAWinner] ) {
         
         //  Create a new set and score object
+        Set *set = [[Set alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
         
+        //  Start playing a set  (which consists of many games)
+        //  Set the set score as the result
+        Score *setScore = [set play: player];
         
+        //  Add the score to our Matchscore object
+        [matchScore addScore:[setScore getWinner]];
         
-        PointScore *pScore =  (PointScore *) [player serveAPoint];
-        [gameScore addScore: [pScore getWinner]];
+        //  The set is over so remove it before starting another
+        [set delete:set];
         
-        pScore = nil;
+        //  Switch servers by setting p as the other player
+        player = [Player otherPlayer: player];
         
     }
     
