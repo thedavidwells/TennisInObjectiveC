@@ -4,7 +4,7 @@
 //
 //  CREATED BY DAVID WELLS
 //  Copyright (c) 2014 David Wells. All rights reserved.
-//
+//  All code not provided by Professor Kooshesh is the sole work of David Wells for CS470 at Sonoma State University.
 
 #import "TieBreaker.h"
 #import "PointScore.h"
@@ -36,6 +36,7 @@
     TieBreakerScore *tieScore = [[TieBreakerScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
     // Switch servers
+    // p = p -> otherPlayer(p);
     player = [Player otherPlayer: player];
     
     // Create a variable to keep track of when we switch servers (initialized to not switch)
@@ -51,8 +52,10 @@
         //  Here we determine if we need to switch servers
         //  Because we switch the server in a tie-breaker round every 2 turns
         if (switchTheServer) {
+            
             // Switch servers
             player = [Player otherPlayer: player];
+            
         }
         
         // Set the server variable to the opposite of whatever it is currently set to

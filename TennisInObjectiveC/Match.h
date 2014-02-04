@@ -4,7 +4,7 @@
 //
 //  CREATED BY DAVID WELLS
 //  Copyright (c) 2014 David Wells. All rights reserved.
-//
+//  All code not provided by Professor Kooshesh is the sole work of David Wells for CS470 at Sonoma State University.
 
 #import <Foundation/Foundation.h>
 #import "Competition.h"
@@ -16,15 +16,8 @@
  *  match.  After that, players alternate who serves the next set.
  */
 
-@interface Match : Competition
 
-//@property (nonatomic) Player *player1;
-//@property (nonatomic) Player *player2;
-/*
- @property (nonatomic) int player1Score;
-@property (nonatomic) int player2Score;
-@property (nonatomic) Player *winner;
-*/
+@interface Match : Competition
 
 //  Instance Method Declarations
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2;

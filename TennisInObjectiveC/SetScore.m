@@ -4,7 +4,7 @@
 //
 //  CREATED BY DAVID WELLS
 //  Copyright (c) 2014 David Wells. All rights reserved.
-//
+//  All code not provided by Professor Kooshesh is the sole work of David Wells for CS470 at Sonoma State University.
 
 #import "SetScore.h"
 #import "TieBreaker.h"
@@ -53,14 +53,10 @@
 
 -(NSString *) description
 {
+    // Used to print the results of the set that was played
     
     return [NSString stringWithFormat:@"   %d \t \t %d ", self.player1Score, self.player2Score];
-    /*
-    if (self.tieBreakerScore != nil) {
-        [self.tieBreakerScore print];
-    }
-     */
-    
+        
 }
 
 

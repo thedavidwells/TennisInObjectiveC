@@ -4,7 +4,7 @@
 //
 //  CREATED BY DAVID WELLS
 //  Copyright (c) 2014 David Wells. All rights reserved.
-//
+//  All code not provided by Professor Kooshesh is the sole work of David Wells for CS470 at Sonoma State University.
 
 /** Class, Score, represents the abstract notion of keeping track of
  *  numbers related to different types of competition.  These numbers

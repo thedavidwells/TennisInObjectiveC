@@ -4,15 +4,16 @@
 //
 //  CREATED BY DAVID WELLS
 //  Copyright (c) 2014 David Wells. All rights reserved.
-//
+//  All code not provided by Professor Kooshesh is the sole work of David Wells for CS470 at Sonoma State University.
 
 #import "Match.h"
 #import "MatchScore.h"
 #import "Set.h"
 #import "SetScore.h"
 #import "Game.h"
-#include "TieBreakerScore.h"
-#include "TieBreaker.h"
+#import "TieBreakerScore.h"
+#import "TieBreaker.h"
+#import "Set.h"
 
 @implementation Match
 
@@ -26,14 +27,15 @@
     return self;
 }
 
+
 //  Implemented by David Wells
 -(Score *) play: (Player *) player
 {
-     // Create a score object for this MATCH
-    Score *matchScore = [[MatchScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
+     // Create a Match Score object for this MATCH and initialize it with Players 1 & 2
+    MatchScore *scoreForMatch = [[MatchScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
     // While we don't have a winner of the Match, continue playing sets.
-    while( ! [matchScore haveAWinner] ) {
+    while( ! [scoreForMatch haveAWinner] ) {
         
         //  Create a new set and score object
         Set *set = [[Set alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
@@ -42,18 +44,20 @@
         //  Set the set score as the result
         SetScore *setScore = (SetScore *)[set play: player];
         
-        //  Add the score to our Matchscore object
-        [matchScore addScore: setScore ];
+        //  Add the score to the Matchscore object
+        [scoreForMatch addScore: setScore ];
         
-        //  The set is over so remove it before starting another
-        //[set delete:set];
+        //  The set is over so remove it before starting another - in the C++ implemention we use:
+        //  delete set;
+        //  Don't worry about this because Objective-C uses ARC for memory management
         
         //  Switch servers by setting p as the other player
+        //   p = p -> otherPlayer(p);
         player = [Player otherPlayer: player];
         
     }
     
-    return matchScore;
+    return scoreForMatch;
 }
 
 
