@@ -54,7 +54,7 @@
 -(NSString *) description
 {
     
-    return [NSString stringWithFormat:@" %d, %d ", self.player1Score, self.player2Score];
+    return [NSString stringWithFormat:@"   %d \t \t %d ", self.player1Score, self.player2Score];
     /*
     if (self.tieBreakerScore != nil) {
         [self.tieBreakerScore print];

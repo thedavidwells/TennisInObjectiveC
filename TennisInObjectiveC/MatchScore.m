@@ -16,6 +16,9 @@
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2
 {
+    //  When I initialize the MatchScore object, I initialize the score array
+    self.scores = [[NSMutableArray alloc] init ];
+    
     if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2   ]) == nil)
         return nil;
     return self;
@@ -48,11 +51,11 @@
     
     // Using same format as tennis.cpp for printing:
     //cout << "   Set No.    Player A          Player B\n";
-    NSLog(@"   Set No.    Player A          Player B\n");
+    NSLog(@"   Set No.    Player A    Player B\n");
     
     for( int i = 0; i < _setNumber; i++ ) {
         
-        NSLog(@"%d       %@", i+1, [self.scores objectAtIndex: i ]);
+        NSLog(@"\t   %d       %@ ", i+1, [self.scores objectAtIndex: i ]);
         
         // Old code:
         // Just setting widths and specifying format for printing
@@ -62,11 +65,18 @@
         
     }
     
-    // Print out final winner of the match:
+    // Put the final scores for each player into the variabl
+    int finalPlayer1Score = self.player1Score;
+    int finalPlayer2Score = self.player2Score;
     
-    return self.player1Score > self.player2Score ?
-    [NSString stringWithFormat:@"\nPlayer A wins the match %d sets to %d \n", self.player1Score, self.player2Score] :
-    [NSString stringWithFormat:@"\nPlayer B wins the match %d sets to %d \n", self.player2Score, self.player1Score];
+    // Print out final winner of the match:
+    if (finalPlayer1Score > finalPlayer2Score) {
+        return [NSString stringWithFormat:@"\nPlayer A wins the match %d sets to %d \n", finalPlayer1Score, finalPlayer2Score ];
+    }
+    else{
+        return [NSString stringWithFormat:@"\nPlayer B wins the match %d sets to %d \n", finalPlayer2Score, finalPlayer1Score ];
+    }
+    
     
     
     
